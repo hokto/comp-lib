@@ -433,6 +433,12 @@ class BinarySearchTree:
             y = y.p
         return r
 
+    def __getitem__(self, position) -> Any:
+        return self.get_kth(k=position)
+
+    def __len__(self) -> int:
+        return self.get_size()
+
 
 if __name__ == "__main__":
     L, Q = list(map(int, input().split(" ")))
@@ -445,4 +451,4 @@ if __name__ == "__main__":
             bst.insert(x)
         else:
             k = bst.index(bst.upper_bound(x))
-            print(bst.get_kth(k) - bst.get_kth(k - 1))
+            print(bst[k] - bst[k - 1])

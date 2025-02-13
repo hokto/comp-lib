@@ -39,9 +39,10 @@ bst.is_empty() -> bool
 ```
 `bst`に含まれるノードが空かどうかを判定する
 
-## get_size
+## get_size/len(bst)
 ```python
 bst.get_size() -> int
+len(bst) -> int
 ```
 `bst`に含まれるノードの個数を返す．
 
@@ -69,9 +70,10 @@ bst.upper_bound(key: Any) -> Any
 ```
 `bst`に含まれるノードの中で，$key< z.key$なるノード`z`のうち最小のものを返す．
 
-## get_kth
+## get_kth/bst[k]
 ```python
 bst.get_kth(k: int) -> Any
+bst[k] -> Any
 ```
 `bst`に含まれるノードの中で，昇順に並べた時に`k`番目となる要素の値を返す．(0-indexed)
 
